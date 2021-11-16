@@ -2,14 +2,20 @@
 ### A simple program for extracting basic information from files in PDB format.
 
 ### Basics
+
 Usage:
+
     pdbprocessor [filepath] [mode]
+
 Examples:
+
     pdbprocessor /home/user/Downloads/1wl3.pdb elemreport
     pdbprocessor 3bb5.pdb aacount SER
     
 Use
+
     pdbprocessor
+
 to enter interactive mode.
     
 ### File path format
