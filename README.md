@@ -44,3 +44,4 @@ Unix terminal:
     pip install -e .
     
 __As of today, other means of installation do not work.__
+_The package can also be downloaded using pip (pip install pdbprocessor), but the command above must still be run in the source folder to enable the command globally._
