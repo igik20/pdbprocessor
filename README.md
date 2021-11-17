@@ -41,6 +41,6 @@ Options are available only in command mode, not in the interactive one. They sho
 
 Unix terminal:
 
-    pip install .
+    pip install -e .
     
 __As of today, other means of installation do not work.__
