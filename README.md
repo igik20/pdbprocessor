@@ -28,3 +28,11 @@ The program supports Unix absolute file paths and all relative paths going down 
 4. aacount - counts the occurrences of a specific amino acid
 
 elemcount and aacount require an additional argument specifying the feature to be counted.
+
+### Installation
+1. Download and uncompress the source files
+2. Navigate to the "pdbprocessor" folder
+3. Open the terminal
+4. Run the following command:
+
+    pip install .
