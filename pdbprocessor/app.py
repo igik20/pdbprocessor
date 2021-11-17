@@ -15,46 +15,32 @@ class Application:
             self.interface.display_menu()
             self.mode = input()
             if self.mode == "elemreport":
-                self.proc.process_pdb_elems()
-                self.proc.print_elem_report()
+                self.proc.do_elem_report("stdout")
             elif self.mode == "elemsearch":
                 self.interface.display_elem_count()
                 self.interface.prompt_element()
-                self.proc.set_elem(input())
-                self.proc.elem_search()
-                self.proc.print_elem_count()
+                self.proc.do_elem_search(input(), "stdout")
             elif self.mode == "aareport":
-                self.proc.process_pdb_aas()
-                #self.proc.print_aa_debug()
-                self.proc.print_aa_report()
+                self.proc.do_aa_report("stdout")
             elif self.mode == "aacount":
                 self.interface.display_aa_count()
                 self.interface.prompt_aa()
-                self.proc.set_aa(input().upper())
-                self.proc.aa_search()
-                self.proc.print_aa_count()
+                self.proc.do_aa_search()
             elif self.mode.lower() == "sus":
                 print("#AMOGUS#") 
             else:
                 print("Wrong mode!")
         else:
-            self.interface.display_start()
             self.proc.set_path(sys.argv[1])
             self.mode = sys.argv[2]
+            self.target = "file" if "writefile" in sys.argv else "stdout"
             if self.mode == "elemreport":
-                self.proc.process_pdb_elems()
-                self.proc.print_elem_report()
+                self.proc.do_elem_report(self.target)
             elif self.mode == "elemsearch":
-                self.proc.set_elem(sys.argv[3])
-                self.proc.elem_search()
-                self.proc.print_elem_count()
+                self.proc.do_elem_search(sys.argv[3], self.target)
             elif self.mode == "aareport":
-                self.proc.process_pdb_aas()
-                #self.proc.print_aa_debug()
-                self.proc.print_aa_report()
+                self.proc.do_aa_report(self.target)
             elif self.mode == "aacount":
-                self.proc.set_aa(sys.argv[3].upper())
-                self.proc.aa_search()
-                self.proc.print_aa_count()
+                self.proc.do_aa_search(sys.argv[3].upper(), self.target)
             else:
                 print("Wrong mode!")
