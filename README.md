@@ -29,6 +29,10 @@ The program supports Unix absolute file paths and all relative paths going down 
 
 elemcount and aacount require an additional argument specifying the feature to be counted.
 
+### Options
+Options are available only in command mode, not in the interactive one. They should be written as arguments, after all necessary positional ones, separated by spaces. Currently available options:
+- writefile - creates the output as a file instead of writing it to the console; in my opinion preferable in comparison with bash output redirection
+
 ### Installation
 1. Download and uncompress the source files
 2. Navigate to the "pdbprocessor" folder
