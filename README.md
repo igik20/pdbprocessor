@@ -35,5 +35,6 @@ elemcount and aacount require an additional argument specifying the feature to b
 3. Open the terminal
 4. Run the following command:
 
+Unix terminal:
 
     pip install .
