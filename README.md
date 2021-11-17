@@ -38,3 +38,5 @@ elemcount and aacount require an additional argument specifying the feature to b
 Unix terminal:
 
     pip install .
+    
+__As of today, other means of installation do not work.__
