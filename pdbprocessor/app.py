@@ -31,6 +31,8 @@ class Application:
             else:
                 print("Wrong mode!")
         else:
+            if len(sys.argv) < 3:
+                raise ValueError("Not enough arguments specified!")
             self.proc.set_path(sys.argv[1])
             self.mode = sys.argv[2]
             self.target = "file" if "writefile" in sys.argv else "stdout"
